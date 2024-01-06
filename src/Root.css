@@ -1,0 +1,18 @@
+#root-nav{
+  background-color: brown;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+
+body{
+  margin: 0;
+  background-color: white;
+}
+
+#root-btn{
+  height: 30px;
+  border-radius: 10%;
+  background-color: blue;
+}
