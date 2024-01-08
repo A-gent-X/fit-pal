@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import './ExerciseCard.css'
 
 const ExerciseCard = ({workout, refetchAllWorkouts}) => {
   const [editing, setEditing] = useState(false)
@@ -18,8 +19,11 @@ const ExerciseCard = ({workout, refetchAllWorkouts}) => {
   // }
 
   return (
-    <div className='h-[500px] w-[500px]'>
-      <h1>{workout.description}</h1>
+    <div className='fitness-card'>
+      <h1 className='workout-description'>Fitness Routine: {workout.description}</h1>
+      <div className="workout-img" >
+        <img src={workout.imgURL} />
+      </div>
       <h1>{workout.date}</h1>
       <img src={workout.imgURL} className='h-3/4 w-3/4'/>
       {/* {editing ? (

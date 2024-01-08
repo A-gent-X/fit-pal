@@ -1,0 +1,47 @@
+.input-calories{
+  width: 300px;
+  height: 100px;
+  margin-left: 30px;
+  background-color: #edf2f4;
+}
+
+.fit-description{
+  width: 300px;
+  height: 100px;
+  background-color: #edf2f4;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.input-date{
+  width: 300px;
+  height: 70px;
+  background-color: #edf2f4;
+}
+
+.workout-img{
+  width: 300px;
+  height: 70px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #edf2f4;
+}
+
+#fit-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fit-btn{
+  height: 40px;
+  width: 100px;
+  background-color: #d90429;
+  color: white;
+  border-radius: 10%;
+}
+
+.fit-container{
+
+}

@@ -1,6 +1,8 @@
-.fitness-div{
+.meal-holder{
   display: flex;
   justify-content: space-between;
 }
 
-
+.search-bar{
+  display: flex;
+}

@@ -3,9 +3,10 @@ import axios from "axios";
 import AuthContext from "../store/AuthContext";
 import { useLoaderData } from "react-router-dom";
 import './Dashboard.css'
-import Footer from './Footer'
+
 
 export const getUserGoal = async () => {
+  console.log(localStorage.getItem('userId'))
   const userGoal = await axios.get(
     `/api/goal/${localStorage.getItem("userId")}`
   );
@@ -39,13 +40,28 @@ const Dashboard = () => {
     <div id="dashboard">
       {userGoal?.weightGoal ? (
         <div>
-          <div>
-            <h3>Starting Weight:</h3>
-            {userGoal.startingWeight}</div>
-            <h3>Goal Weight:</h3>
-           <div>{userGoal.weightGoal}</div>
-            <h3>Daily Calories:</h3>
-           <div>{userGoal.calorieGoal}</div>
+          <div className="dashboard-container">
+            <div className="sw-container">
+              <h3 className="sw-text">Starting Weight:</h3>
+              <div className="sw-div">
+                <h3 className="sw-goal">{userGoal.startingWeight}</h3>
+              </div>
+            </div>
+        
+            <div className="us-container">
+              <h3 className="us-text">Goal Weight:</h3>
+              <div className="us-div">
+                <h3 className="us-goal">{userGoal.weightGoal}</h3>
+              </div>
+            </div>
+
+            <div className="dc-container">
+              <h3 className="dc-text">Daily Calories:</h3>
+              <div className="dc-div">
+                <h3 className="dc-goal">{userGoal.calorieGoal}</h3>
+              </div>
+            </div>
+            </div>
            </div>
       ) : (
         <form onSubmit={(e) => handleSubmit(e)}>

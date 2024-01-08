@@ -1,7 +1,9 @@
-import {useState} from 'react'
+import { useState } from "react";
+import "./MealCard.css";
+import axios from "axios";
 
-const MealCard = ({meal, refetchAllMeals}) => {
-  const [editing, setEditing] = useState(false)
+const MealCard = ({ meal, refetchAllMeals }) => {
+  const [editing, setEditing] = useState(false);
   // const [priority, setPriority] = useState(book.priority)
 
   // const handlePriorityChange = e => {
@@ -15,12 +17,33 @@ const MealCard = ({meal, refetchAllMeals}) => {
   //     .catch(err => console.log(err))
   // }
 
+  const handleDeleteMeal = () => {
+    axios.delete(`/api/meals/${meal.id}`)
+    .then(res => {
+      refetchAllMeals()
+    })
+    .catch(err => console.log(err))
+  }
+
   return (
-    <div className='h-[500px] w-[500px]'>
-      <h1>{meal.mealDescription}</h1>
-      <h1>{meal.calories}</h1>
-      <h1>{meal.date}</h1>
-      <img src={meal.imgURL} className='h-3/4 w-3/4'/>
+    <div className="meal-card">
+      <div className="meal-des">
+        <h1>{meal.mealDescription}</h1>
+      </div>
+      <div className="meal-img" >
+        <img src={meal.imgURL} />
+      </div>
+      <div>
+        <h1>Calories: {meal.calories}</h1>
+        <h2></h2>
+      </div>
+      <div>
+        <h1>{meal.date}</h1>
+      </div>
+
+      <button onClick={() => handleDeleteMeal()}>Delete</button>
+
+
       {/* {editing ? (
         <form onSubmit={e => handlePriorityChange(e)}>
          
@@ -35,7 +58,7 @@ const MealCard = ({meal, refetchAllMeals}) => {
         </div>
       )} */}
     </div>
-  )
-}
+  );
+};
 
-export default MealCard
+export default MealCard;

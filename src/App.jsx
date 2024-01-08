@@ -11,6 +11,7 @@ import { getAllMeals } from './pages/MealList.jsx'
 import { getAllWorkouts } from './pages/ExerciseList.jsx'
 import { getUserGoal } from './pages/Dashboard.jsx'
 
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -51,13 +52,7 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <div>
-      {
      <RouterProvider router={router}/>
-
-      }
-    </div>
-
   )
 }
 

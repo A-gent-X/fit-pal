@@ -1,3 +1,85 @@
 div{
   background-color: white;
 }
+
+.auth-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.auth-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+  height: 80vh;
+  width: 600px;
+  border: solid black;
+}
+
+.auth-btn{
+  width: 240px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: white;
+  color: #4361ee;
+}
+
+.reg-btn{
+  width: 240px;
+  height: 40px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  background-color: #4361ee;
+  color: white;
+}
+
+.user-input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 350px;
+  margin-bottom: 10px;
+}
+
+.user-password{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+.div-input{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.div-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  width: 350px;
+}
+
+.divider::before, .divider::after {
+  flex: 1;
+  content: '';
+  padding: 1px;
+  background-color: black;
+  margin: 5px;
+
+}

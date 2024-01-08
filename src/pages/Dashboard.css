@@ -1,4 +1,87 @@
 #dashboard{
+  display: flex;
+  justify-content: center;
   height: 100vh;
-  background-color: antiquewhite;
+  align-items: center;
+
+}
+
+.dashboard-container{
+  border: solid black;
+  height: 500px;
+  width: 400px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  border-radius: 1%;
+}
+
+.sw-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sw-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid black;
+  height: 50px;
+  width: 200px;
+  opacity: 0.5;
+  background-color: lightgray;
+  border-radius: 5%;
+  color: black;
+}
+
+.sw-goal{
+  color: black;
+}
+
+.us-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.us-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid black;
+  height: 50px;
+  width: 200px;
+  opacity: 0.5;
+  background-color: lightgray;
+  border-radius: 5%;
+}
+
+.us-goal{
+  color: black;
+}
+
+.dc-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dc-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid black;
+  height: 50px;
+  width: 200px;
+  opacity: 0.5;
+  background-color: lightgray;
+  border-radius: 5%;
+}
+
+.dc-goal{
+  color: black;
 }

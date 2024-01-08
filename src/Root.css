@@ -1,18 +1,29 @@
-#root-nav{
-  background-color: brown;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 90px;
+body{
+  margin: 0px;
 }
 
-body{
-  margin: 0;
-  background-color: white;
+.root-nav{
+  display: flex;
+  justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+}
+
+.navlink{
+  color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
 }
 
 #root-btn{
-  height: 30px;
-  border-radius: 10%;
-  background-color: blue;
+  background-color: lightgray;
+  box-shadow: 3px 1.5px 1.5px black;
+  border-radius: 8%;
+  height: 25px;
 }
+
+.rootnav-container{
+  background-color: #4361ee;
+}
+

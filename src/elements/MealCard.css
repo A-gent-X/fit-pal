@@ -1,0 +1,15 @@
+.meal-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.meal-img{
+ 
+}
+
+.meal-des{
+  
+}

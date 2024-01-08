@@ -21,9 +21,11 @@ Workouts.belongsTo(User)
 ProgressTracker.belongsTo(User)
 
 const {register, login} = require('./controllers/authController')
-const {addMeals, getAllMeals, editMeal} = require('./controllers/mealsController')
+const {addMeals, getAllMeals, editMeal, deleteMeal} = require('./controllers/mealsController')
 const {addWorkouts, getAllWorkouts} = require('./controllers/exerciseController')
 const {addGoal, getUserGoal} = require('./controllers/goalsController')
+
+
 
 
 const {PORT} = process.env
@@ -36,9 +38,10 @@ app.use(express.json())
 app.post('/api/register', register)
 app.post('/api/login', login)
 
-app.post('/api/meal', addMeals)
+app.post('/api/meals', addMeals)
 app.get('/api/meals/:userId', getAllMeals)
-app.put('/api/meal', editMeal)
+app.put('/api/meals', editMeal)
+app.delete('/api/meals/:mealId', deleteMeal)
 
 app.post('/api/exercise', addWorkouts)
 app.get('/api/workouts/:userId', getAllWorkouts)

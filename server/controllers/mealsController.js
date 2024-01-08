@@ -42,5 +42,18 @@ module.exports = {
       console.log(err)
       res.status(500).send('Something went wrong in getAllMeals')
     }
+  }, 
+  deleteMeal: async (req, res) => {
+    try {
+      const {mealId} =req.params
+
+      await Meals.destroy({where: {id: mealId}})
+
+      res.sendStatus(200)
+
+    }catch (err) {
+      console.log(err)
+      res.status(500).send('Something went wrong in deleteMeals')
+    }
   }
 }

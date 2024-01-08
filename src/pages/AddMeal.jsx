@@ -1,6 +1,7 @@
 import {useState, useContext} from 'react'
 import axios from 'axios'
 import AuthContext from '../store/AuthContext'
+import './AddMeal.css'
 
 const AddMeal = () => {
 const {state} = useContext(AuthContext)
@@ -13,21 +14,23 @@ const {state} = useContext(AuthContext)
   const handleSubmit = e => {
     e.preventDefault()
 
-    axios.post('/api/meal', {mealDescription, calories, date, imgURL, userId: state.userId})
+    axios.post('/api/meals', {mealDescription, calories, date, imgURL, userId: state.userId})
       .then(res => console.log(res.data))
       .catch(err => console.log(err))
 
   }
 
   return (
-    <div>
-      <form onSubmit={e => handleSubmit(e)}>
-        <input placeholder='mealDescription' onChange={e => setMealDescription(e.target.value)}/>
-        <input placeholder='record calories' onChange={e => setCalories(e.target.value)}/>
-        <input type='date' onChange={e => setDate(e.target.value)}/>
-        <input placeholder='image url' onChange={e => setURL(e.target.value)}/>
- 
-        <button type='submit'>Add Meal</button>
+    <div className='meal-container'>
+      <form id='meal-form'
+      onSubmit={e => handleSubmit(e)}>
+        <div className='meal-div'>
+          <input className='meal-description' placeholder='mealDescription' onChange={e => setMealDescription(e.target.value)}/>
+          <input className='input-calories' placeholder='record calories' onChange={e => setCalories(e.target.value)}/>
+        </div>
+          <input className='calendar' type='date' onChange={e => setDate(e.target.value)}/>
+          <input className='input-img' placeholder='image url' onChange={e => setURL(e.target.value)}/>
+          <button className='meal-btn' type='submit'>Add Meal</button>
       </form>
     </div>
   )

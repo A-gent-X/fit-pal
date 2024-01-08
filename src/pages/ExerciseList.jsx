@@ -3,7 +3,9 @@ import axios from 'axios'
 import AuthContext from '../store/AuthContext'
 import { useLoaderData } from 'react-router-dom'
 import ExerciseCard from '../elements/ExerciseCard'
-import Footer from './footer'
+import './ExerciseList.css'
+import { BiSearchAlt2 } from "react-icons/bi";
+
 
 
 
@@ -26,10 +28,21 @@ const ExerciseList = () => {
       .catch(err => console.log(err))
   }
   return (
-    <div>
-      <div>
-        <input placeholder='Search for a workout' onChange={e => setSearchTerm(e.target.value)}/>
+    <div className='fitness-div'>
+    
+      <div className='fitness-form'>
+        {/* <input className='fitness-holder' placeholder='Search for a workout' onChange={e => setSearchTerm(e.target.value)}/> */}
+        <span className='search-bar'>
+        <BiSearchAlt2 size="2em" color="#DA7635" />
+          <input
+            className="searchBar"
+            type="text"
+            onChange={(e) => setSearchTerm(e.target.value)}
+            placeholder="Search for a meal"
+          />
+        </span>
       </div>
+      
       {allWorkouts.filter(workout => {
         return workout.description.toLowerCase().includes(searchTerm.toLowerCase())
       }).map(workout => {
