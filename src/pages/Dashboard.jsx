@@ -3,6 +3,7 @@ import axios from "axios";
 import AuthContext from "../store/AuthContext";
 import { useLoaderData } from "react-router-dom";
 import './Dashboard.css'
+import Footer from "./Footer";
 
 
 export const getUserGoal = async () => {
@@ -36,13 +37,37 @@ const Dashboard = () => {
       .catch((err) => console.log(err));
   };
 
+  const handleDeleteGoal = () => {
+    e.preventDefault();
+
+    axios
+    .delete('/api/goal/', {
+      weightGoal,
+      startingWeight,
+      calorieGoal,
+      goalId: state.goalId,
+    })
+    .then((res) => console.log(res.data))
+    .catch((err) => console.log(err));
+};
+
   return (
     <div id="dashboard">
+
+    <div className="x-box"></div>
+    <div className="x-box-cont">
+      <strong><h1 className="daily">Daily Focus</h1></strong>
+      <strong><h6 className="diet-plan">Diet 35%</h6></strong>
+      <strong className="fitness-plan"><h6>Fitness 30%</h6></strong>
+      <strong className="caloric-intake"><h6>Recovery 35%</h6></strong>
+    </div>
+
+
       {userGoal?.weightGoal ? (
         <div>
           <div className="dashboard-container">
             <div className="sw-container">
-              <h3 className="sw-text">Starting Weight:</h3>
+              <h1 className="sw-text">Starting Weight:</h1>
               <div className="sw-div">
                 <h3 className="sw-goal">{userGoal.startingWeight}</h3>
               </div>
@@ -61,29 +86,30 @@ const Dashboard = () => {
                 <h3 className="dc-goal">{userGoal.calorieGoal}</h3>
               </div>
             </div>
+            <button onClick={() => handleDeleteGoal()}>reset</button>
             </div>
            </div>
       ) : (
-        <form onSubmit={(e) => handleSubmit(e)}>
-          <input
+        <form className="dash-board-form" id='square' onSubmit={(e) => handleSubmit(e)}>
+          <input className="dash-board-input" id="weight-gl"
             placeholder="weightGoal"
             onChange={(e) => setWeightGoal(e.target.value)}
           />
-          <input
+          <input className="dash-board-input" id="rec"
             placeholder="record weight"
             onChange={(e) => setStartingWeight(e.target.value)}
           />
-          <input
+          <input className="dash-board-input" id="cal"
             placeholder="calories"
             onChange={(e) => setCalorieGoal(e.target.value)}
           />
 
-          <button type="submit">Add Goal</button>
+          <button className="card-btn" type="submit">Add Goal</button>
           
         </form>
         
       )}
-         
+         <Footer />
     </div>
   );
 };

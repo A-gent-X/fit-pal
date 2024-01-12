@@ -1,8 +1,21 @@
 .meal-holder{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .search-bar{
   display: flex;
 }
+
+.all-meals{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+/* 
+@media(max-width: 1650px){
+  .meal-meals{
+    width: 300px;
+  }
+}  */

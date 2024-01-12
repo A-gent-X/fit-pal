@@ -10,6 +10,8 @@ module.exports = {
       primaryKey: true
     },
     description: DataTypes.STRING(5000),
+    weight: DataTypes.INTEGER,
+    volume: DataTypes.INTEGER,
     date: DataTypes.DATE,
     imgURL: DataTypes.STRING(5000)
   })

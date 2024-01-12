@@ -44,5 +44,18 @@ module.exports = {
       console.log(err)
       res.status(500).send('Something went wrong in getUserGoal')
     }
+  },
+  deleteGoal: async (req, res) => {
+    try {
+      const {goalId} =req.params
+
+      await Goal.destroy({where: {id: goalId}})
+
+      res.sendStatus(200)
+
+    }catch (err) {
+      console.log(err)
+      res.status(500).send('Something went wrong in goals')
+    }
   }
 }

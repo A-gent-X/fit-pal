@@ -15,25 +15,21 @@ const GoalCard = ({goal, refetchAllGoals}) => {
   //     .catch(err => console.log(err))
   // }
 
+  // const handleDeleteGoal = () => {
+  //   axios.delete(`/api/goal/${goal.id}`)
+  //   .then(res => {
+  //     refetchUserGoal()
+  //   })
+  //   .catch(err => console.log(err))
+  // }
+
+
   return (
     <div className='h-[500px] w-[500px]'>
       <h1>{goal.weightGoal}</h1>
       <h1>{goal.startingWeight}</h1>
       <h1>{goal.calorieGoal}</h1>
 
-      {/* {editing ? (
-        <form onSubmit={e => handlePriorityChange(e)}>
-         
-          <input value={priority} onChange={e => setPriority(e.target.value)} />
-          <button type='submit'>Save</button>
-
-        </form>
-      ) : (
-        <div>
-          <p>{meal.priority}</p>
-          <button onClick={() => setEditing(!editing)}>Change Priority</button>
-        </div>
-      )} */}
     </div>
   )
 }

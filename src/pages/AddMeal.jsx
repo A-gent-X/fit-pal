@@ -2,6 +2,7 @@ import {useState, useContext} from 'react'
 import axios from 'axios'
 import AuthContext from '../store/AuthContext'
 import './AddMeal.css'
+import Footer from './Footer'
 
 const AddMeal = () => {
 const {state} = useContext(AuthContext)
@@ -21,7 +22,7 @@ const {state} = useContext(AuthContext)
   }
 
   return (
-    <div className='meal-container'>
+    <div id='meal-container'>
       <form id='meal-form'
       onSubmit={e => handleSubmit(e)}>
         <div className='meal-div'>
@@ -32,6 +33,7 @@ const {state} = useContext(AuthContext)
           <input className='input-img' placeholder='image url' onChange={e => setURL(e.target.value)}/>
           <button className='meal-btn' type='submit'>Add Meal</button>
       </form>
+      <Footer />
     </div>
   )
 }

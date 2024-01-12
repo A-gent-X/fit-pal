@@ -1,3 +1,11 @@
+.toast-container{
+  background: darkblue;
+  color: #fff;
+  font-size: 20px;
+  width: 34vw;
+  padding: 30px 20px;
+}
+
 div{
   background-color: white;
 }
@@ -25,7 +33,7 @@ div{
   height: 40px;
   border-radius: 30px;
   background-color: white;
-  color: #4361ee;
+  color: #0005ff;
 }
 
 .reg-btn{
@@ -33,7 +41,7 @@ div{
   height: 40px;
   border-radius: 30px;
   margin-bottom: 10px;
-  background-color: #4361ee;
+  background-color: #0005ff;
   color: white;
 }
 
@@ -81,5 +89,13 @@ div{
   padding: 1px;
   background-color: black;
   margin: 5px;
+
+}
+
+.icon{
+  height: 75px;
+}
+
+.logo{
 
 }

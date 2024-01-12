@@ -10,8 +10,8 @@ body{
 }
 
 .navlink{
-  color: white;
-  height: 50px;
+  color: #12CBC4;
+  height: 70px;
   display: flex;
   align-items: center;
 }
@@ -24,6 +24,11 @@ body{
 }
 
 .rootnav-container{
-  background-color: #4361ee;
+  background-color: #00308F;
 }
 
+/* @media(max-width: 1650px){
+  .rootnav-container{
+
+  }
+}  */

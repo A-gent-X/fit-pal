@@ -22,8 +22,8 @@ ProgressTracker.belongsTo(User)
 
 const {register, login} = require('./controllers/authController')
 const {addMeals, getAllMeals, editMeal, deleteMeal} = require('./controllers/mealsController')
-const {addWorkouts, getAllWorkouts} = require('./controllers/exerciseController')
-const {addGoal, getUserGoal} = require('./controllers/goalsController')
+const {addWorkouts, getAllWorkouts, deleteWorkouts} = require('./controllers/exerciseController')
+const {addGoal, getUserGoal, deleteGoal} = require('./controllers/goalsController')
 
 
 
@@ -43,13 +43,15 @@ app.get('/api/meals/:userId', getAllMeals)
 app.put('/api/meals', editMeal)
 app.delete('/api/meals/:mealId', deleteMeal)
 
-app.post('/api/exercise', addWorkouts)
+app.post('/api/workouts', addWorkouts)
 app.get('/api/workouts/:userId', getAllWorkouts)
+app.delete('/api/workouts/:workoutId', deleteWorkouts)
 
 app.post('/api/goal', addGoal)
 app.get('/api/goal/:userId', getUserGoal)
+app.delete('/api/goal/:goalId', deleteGoal)
 
-sequelize.sync()
-// sequelize.sync({force: true})
+// sequelize.sync()
+sequelize.sync({force: true})
     .then(() => app.listen(PORT, console.log(`Take us to paradise ${PORT}!`)))
     .catch(err => console.log(err))

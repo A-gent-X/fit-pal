@@ -1,7 +1,46 @@
 .fitness-card{
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: solid black;
+  height: 600px;
+  width: 400px;
+  border-radius: 5%;
+  margin-left: 40px;
 }
 
-.workout-description{
-  
-}
+.workout-img{
+  height: 200px;
+  width: 400px;
+  border-top-right-radius: 5%;
+  border-top-left-radius: 5%;
+  object-fit: cover;
+ }
+
+
+@media(max-width: 650px){
+  .fitness-card{
+
+ 
+  }
+} 
+
+@media(max-width: 650px){
+  .workout-img{
+    width: 200px;
+  }
+} 
+
+
+@media(mid-width: 1650px){
+  .fitness-card{
+    width: 300px;
+  }
+} 
+
+@media(mid-width: 1650px){
+  .workout-img{
+    width: 100px;
+  }
+} 

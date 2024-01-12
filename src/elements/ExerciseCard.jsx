@@ -1,8 +1,9 @@
-import {useState} from 'react'
-import './ExerciseCard.css'
+import { useState } from "react";
+import "./ExerciseCard.css";
+import axios from "axios";
 
-const ExerciseCard = ({workout, refetchAllWorkouts}) => {
-  const [editing, setEditing] = useState(false)
+const ExerciseCard = ({ workout, refetchAllWorkouts }) => {
+  const [editing, setEditing] = useState(false);
   // const [description, setDescription] = useState(workout.description)
   // const [date, setDate] = useState(workout.date)
   // const [imgURL, setImgURL] = useState(workout.imgURL)
@@ -18,14 +19,33 @@ const ExerciseCard = ({workout, refetchAllWorkouts}) => {
   //     .catch(err => console.log(err))
   // }
 
+  const handleDeleteWorkouts = () => {
+    axios
+      .delete(`/api/workouts/${workout.id}`)
+      .then((res) => {
+        refetchAllWorkouts();
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
-    <div className='fitness-card'>
-      <h1 className='workout-description'>Fitness Routine: {workout.description}</h1>
-      <div className="workout-img" >
-        <img src={workout.imgURL} />
+    <div className="fitness-card">
+
+        <img className="workout-img" src={workout.imgURL} />
+
+      <div>
+        <h1 className="workout-description">{workout.description}</h1>
       </div>
-      <h1>{workout.date}</h1>
-      <img src={workout.imgURL} className='h-3/4 w-3/4'/>
+      <div>
+        <h2>Mass: {workout.weight}</h2>
+      </div>
+      <div>
+        <h2>Duration: {workout.volume}</h2>
+      </div>
+      <div>
+        <h2>{workout.date}</h2>
+      </div>
+
       {/* {editing ? (
         <form onSubmit={e => handleDescriptionChange(e)}>
          
@@ -39,8 +59,12 @@ const ExerciseCard = ({workout, refetchAllWorkouts}) => {
           <button onClick={() => setEditing(!editing)}>Change Description</button>
         </div>
       )} */}
-    </div>
-  )
-}
 
-export default ExerciseCard
+      <button className="card-btn" onClick={() => handleDeleteWorkouts()}>
+        Delete
+      </button>
+    </div>
+  );
+};
+
+export default ExerciseCard;

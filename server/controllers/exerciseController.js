@@ -3,9 +3,9 @@ const {Workouts} = require('../models/workouts')
 module.exports = {
   addWorkouts: async (req, res) => {
     try {
-      const {description, date, imgURL, userId} = req.body
+      const {description, weight, volume, date, imgURL, userId} = req.body
 
-      const newWorkouts = await Workouts.create({description, date, imgURL, userId})
+      const newWorkouts = await Workouts.create({description, weight, volume, date, imgURL, userId})
 
       res.status(200).send(newWorkouts)
 
@@ -22,7 +22,7 @@ module.exports = {
 
       const allWorkouts = await Workouts.findAll({
         where: {userId},
-        order: ['description', 'date', 'imgURL']})
+        })
 
       res.status(200).send(allWorkouts)
     } catch(err){
@@ -32,15 +32,28 @@ module.exports = {
   },
   editWorkouts: async (req, res) => {
     try {
-      const {description, date, imgURL} = req.body
+      const {description, weight, volume, date, imgURL} = req.body
 
-      await Workout.update({description, date, imgURL}, {where: {id: workoutId}})
+      await Workout.update({description, weight, volume, date, imgURL}, {where: {id: workoutId}})
 
       res.sendStatus(200)
 
     } catch(err){
       console.log(err)
       res.status(500).send('Something went wrong in getAllWorkouts')
+    }
+  },
+  deleteWorkouts: async (req, res) => {
+    try {
+      const {workoutId} =req.params
+
+      await Workouts.destroy({where: {id: workoutId}})
+
+      res.sendStatus(200)
+
+    }catch (err) {
+      console.log(err)
+      res.status(500).send('Something went wrong in deleteWorkouts')
     }
   }
 }

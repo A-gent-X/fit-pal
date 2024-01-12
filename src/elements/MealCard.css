@@ -1,15 +1,28 @@
-.meal-card{
+.meal-img{
+ height: 300px;
+ width: 400px;
+ border-top-right-radius: 5%;
+ border-top-left-radius: 5%;
+ object-fit: cover;
+}
+
+.card-btn{
+  height: 40px;
+  width: 100px;
+  background-color: #d90429;
+  color: white;
+  border-radius: 10%;
+}
+
+.meal-container{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  border: solid black;
+  height: 600px;
+  width: 400px;
+  border-radius: 5%;
+  margin-left: 40px;
 }
 
-.meal-img{
- 
-}
-
-.meal-des{
-  
-}

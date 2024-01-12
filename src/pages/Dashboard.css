@@ -3,7 +3,7 @@
   justify-content: center;
   height: 100vh;
   align-items: center;
-
+  background: linear-gradient(120deg, #003DB8 60%, #0044CC 60%);
 }
 
 .dashboard-container{
@@ -85,3 +85,110 @@
 .dc-goal{
   color: black;
 }
+
+.x-box{
+  width: 60vh;
+  height: 60vh;
+  border-radius: 50%;
+  background-color: blue;
+
+  background:repeating-conic-gradient(
+    from 0deg,
+    #d90429 0deg calc(3.6deg * 35),
+    #feec1e calc(3.6deg * 35) calc(3.6deg * 70),
+    #12CBC4 calc(3.6deg * 70) calc(3.6deg * 100)
+  );
+
+}
+
+.x-box-cont{
+  font-size: 25px;
+  padding-left: 50px;
+  position: relative;
+  background-color: #003DB8;
+  width: 50px;
+  color: #000E29;
+}
+
+.x-box-cont h1{
+  font-size: 30px;
+  text-transform: uppercase;
+  position: relative;
+  bottom: 200px;
+  right: 350px;
+}
+
+.diet-plan{
+  position: relative;
+  right: 400px;
+  bottom: 60px;
+}
+
+.fitness-plan{
+  position: relative;
+  right: 200px;
+  bottom: 100px;
+}
+
+.caloric-intake{
+  position: relative;
+  right: 340px;
+}
+
+/* .x-box-cont strong{
+  display: block;
+  margin-bottom: 15px;
+}  */
+
+.dash-board-form{
+  height: 600px;
+  border: solid black;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.dash-board-input{
+  width: 300px;
+  height: 100px;
+  background-color: #edf2f4;
+}
+
+.card-btn{
+  height: 40px;
+  width: 100px;
+  background-color: #d90429;
+  color: white;
+  border-radius: 10%;
+}
+
+
+@media(max-width: 650px){
+#dashboard{
+  position: relative;
+  }
+}
+
+
+@media(max-width: 650px){
+  .dash-board-form{
+    position: relative;
+    right: 100px;
+    }
+  }
+  
+  @media(max-width: 650px){
+    .x-box{
+      position: relative;
+      right: 1000px;
+      }
+    }
+    
+
+
+  
+   
+      
+     

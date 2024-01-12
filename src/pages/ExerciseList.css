@@ -1,6 +1,18 @@
 .fitness-div{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
+
+.fitness-filter{
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+}
+
+@media(max-width: 650px){
+  .fitness-card{
+    height: 600px;
+  }
+} 
 
 

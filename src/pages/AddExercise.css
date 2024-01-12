@@ -10,21 +10,45 @@
   height: 100px;
   background-color: #edf2f4;
   margin-top: 40px;
+}
+
+.fit-weight{
+  width: 300px;
+  height: 100px;
+  background-color: #edf2f4;
+  margin-top: 40px;
+  margin-right: 20px;
+}
+
+.fit-volume{
+  width: 300px;
+  height: 100px;
+  background-color: #edf2f4;
+  margin-top: 40px;
   margin-bottom: 40px;
+  margin-left: 20px;
+}
+
+.fit-weight-vol{
+  display: flex;
+  flex-direction: row;
+  margin-left: 30px;
 }
 
 .input-date{
   width: 300px;
-  height: 70px;
+  height: 100px;
   background-color: #edf2f4;
+  margin-left: 10px;
 }
 
-.workout-img{
+.workout-img-input{
   width: 300px;
-  height: 70px;
+  height: 100px;
   margin-top: 30px;
   margin-bottom: 30px;
   background-color: #edf2f4;
+  margin-left: 10px;
 }
 
 #fit-form{
@@ -42,6 +66,35 @@
   border-radius: 10%;
 }
 
-.fit-container{
 
-}
+/* 
+@media(max-width: 1650px){
+  #fit-form{
+   height: 600px;
+  }
+} 
+
+@media(max-width: 1650px){
+  .fit-weight{
+   margin-left: 100px;
+  }
+} 
+
+@media(max-width: 1650px){
+  .fit-volume{
+    margin-left: 100px;
+  }
+}  */
+
+/* @media(max-width: 1650px){
+  .fit-btn{
+    height: 70px;
+  }
+} 
+
+
+@media(max-width: 1100px){
+.fit-weight-vol{
+  margin-left: 130px;
+  }
+} */

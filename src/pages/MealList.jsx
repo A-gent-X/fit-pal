@@ -5,6 +5,7 @@ import { useLoaderData } from 'react-router-dom'
 import MealCard from '../elements/MealCard'
 import './MealList.css'
 import { BiSearchAlt2 } from "react-icons/bi";
+import Footer from './Footer'
 
 export const getAllMeals = async () => {
   const userId = localStorage.getItem('userId')
@@ -24,23 +25,14 @@ const MealList = () => {
   }
   return (
     <div className='meal-holder'>
-      <div className='search-meal'>
-        {/* <input placeholder='Search for a meal' onChange={e => setSearchTerm(e.target.value)}/> */}
-        <span className='search-bar'>
-        <BiSearchAlt2 size="2em" color="#DA7635" />
-          <input
-            className="searchBar"
-            type="text"
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search for a meals"
-          />
-        </span>
+      <div className='all-meals'> 
+        {allMeals.filter(meal => {
+          return meal.mealDescription.toLowerCase().includes(searchTerm.toLowerCase())
+        }).map(meal => {
+          return <MealCard key={meal.id} meal={meal} refetchAllMeals={refetchAllMeals}/>
+        })}
       </div>
-      {allMeals.filter(meal => {
-        return meal.mealDescription.toLowerCase().includes(searchTerm.toLowerCase())
-      }).map(meal => {
-        return <MealCard key={meal.id} meal={meal} refetchAllMeals={refetchAllMeals}/>
-      })}
+      <Footer />
     </div>
   )
 }

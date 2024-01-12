@@ -18,31 +18,31 @@ const MealCard = ({ meal, refetchAllMeals }) => {
   // }
 
   const handleDeleteMeal = () => {
-    axios.delete(`/api/meals/${meal.id}`)
-    .then(res => {
-      refetchAllMeals()
-    })
-    .catch(err => console.log(err))
-  }
+    axios
+      .delete(`/api/meals/${meal.id}`)
+      .then((res) => {
+        refetchAllMeals();
+      })
+      .catch((err) => console.log(err));
+  };
 
   return (
     <div className="meal-card">
-      <div className="meal-des">
+      <div className="meal-container">
+        <img className="meal-img" src={meal.imgURL} />
+        <div className="meal-des">
         <h1>{meal.mealDescription}</h1>
       </div>
-      <div className="meal-img" >
-        <img src={meal.imgURL} />
+      <div>
+        <h2>Calories: {meal.calories}</h2>
       </div>
       <div>
-        <h1>Calories: {meal.calories}</h1>
-        <h2></h2>
-      </div>
-      <div>
-        <h1>{meal.date}</h1>
+        <h2>{meal.date}</h2>
       </div>
 
-      <button onClick={() => handleDeleteMeal()}>Delete</button>
+      <button className="card-btn" onClick={() => handleDeleteMeal()}>Delete</button>
 
+      </div>
 
       {/* {editing ? (
         <form onSubmit={e => handlePriorityChange(e)}>
