@@ -4,8 +4,7 @@ import Auth from './pages/Auth';
 import AuthContext from './store/AuthContext';
 import './Root.css'
 import { useNavigate } from 'react-router-dom';
-import Footer from './pages/Footer';
-import { BiSearchAlt2 } from "react-icons/bi";
+// import { BiSearchAlt2 } from "react-icons/bi";
 
 
 
@@ -13,17 +12,18 @@ const Root = () => {
   const {state, dispatch} = useContext(AuthContext)
 
   const navigate = useNavigate()
+  
 
   return (
     <div className='rootnav-container'>
       {state.userId ? (
           <nav className='root-nav'>
               <span className='search-bar'>
-        <BiSearchAlt2 size="2em" color="#DA7635" />
+        {/* <BiSearchAlt2 size="2em" color="#DA7635" /> */}
           <input
             className="searchBar"
             type="text"
-            onChange={(e) => setSearchTerm(e.target.value)}
+            // onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search"
           />
         </span>

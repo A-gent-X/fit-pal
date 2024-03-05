@@ -1,3 +1,6 @@
+/*eslint no-undef: "error"*/
+/*eslint-env node*/
+
 const {Workouts} = require('../models/workouts')
 
 module.exports = {

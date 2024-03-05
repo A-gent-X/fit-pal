@@ -1,14 +1,10 @@
-.toast-container{
+/* .toast-container{
   background: darkblue;
   color: #fff;
   font-size: 20px;
   width: 34vw;
   padding: 30px 20px;
-}
-
-div{
-  background-color: white;
-}
+} */
 
 .auth-container{
   display: flex;

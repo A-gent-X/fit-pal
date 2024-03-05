@@ -1,3 +1,6 @@
+/*eslint no-undef: "error"*/
+/*eslint-env node*/
+
 const {DataTypes} = require('sequelize')
 const {sequelize} = require('../util/database')
 

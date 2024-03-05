@@ -135,10 +135,10 @@
   right: 340px;
 }
 
-/* .x-box-cont strong{
+.x-box-cont strong{
   display: block;
   margin-bottom: 15px;
-}  */
+} 
 
 .dash-board-form{
   height: 600px;
@@ -185,7 +185,7 @@
       right: 1000px;
       }
     }
-    
+     
 
 
   

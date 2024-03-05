@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import axios from "axios";
 import AuthContext from "../store/AuthContext";
 import { useLoaderData } from "react-router-dom";
-import './Dashboard.css'
+// import './Dashboard.css'
 import Footer from "./Footer";
 
 

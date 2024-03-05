@@ -1,3 +1,6 @@
+/*eslint no-undef: "error"*/
+/*eslint-env node*/
+
 const {Meals} = require('../models/meals')
 
 module.exports = {

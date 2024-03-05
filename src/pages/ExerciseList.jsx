@@ -4,7 +4,7 @@ import AuthContext from '../store/AuthContext'
 import { useLoaderData } from 'react-router-dom'
 import ExerciseCard from '../elements/ExerciseCard'
 import './ExerciseList.css'
-import { BiSearchAlt2 } from "react-icons/bi";
+// import { BiSearchAlt2 } from "react-icons/bi";
 import Footer from './Footer'
 
 

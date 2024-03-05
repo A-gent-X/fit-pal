@@ -1,3 +1,6 @@
+/*eslint no-undef: "error"*/
+/*eslint-env node*/
+
 require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
@@ -51,7 +54,7 @@ app.post('/api/goal', addGoal)
 app.get('/api/goal/:userId', getUserGoal)
 app.delete('/api/goal/:goalId', deleteGoal)
 
-// sequelize.sync()
-sequelize.sync({force: true})
+sequelize.sync()
+// sequelize.sync({force: true})
     .then(() => app.listen(PORT, console.log(`Take us to paradise ${PORT}!`)))
     .catch(err => console.log(err))

@@ -4,7 +4,7 @@ import AuthContext from '../store/AuthContext'
 import { useLoaderData } from 'react-router-dom'
 import MealCard from '../elements/MealCard'
 import './MealList.css'
-import { BiSearchAlt2 } from "react-icons/bi";
+// import { BiSearchAlt2 } from "react-icons/bi";
 import Footer from './Footer'
 
 export const getAllMeals = async () => {

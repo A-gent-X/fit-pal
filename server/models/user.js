@@ -1,3 +1,6 @@
+/*eslint no-undef: "error"*/
+/*eslint-env node*/
+
 const {DataTypes} = require('sequelize')
 const {sequelize} = require('../util/database')
 
@@ -9,8 +12,7 @@ module.exports = {
       allowNull: false,
       primaryKey: true
     },
-    username: DataTypes.STRING(5000),
-    hashedPass: DataTypes.STRING(5000),
-    email: DataTypes.STRING(5000)
-  })
+    username: DataTypes.STRING,
+    hashedPass: DataTypes.STRING
+})
 }

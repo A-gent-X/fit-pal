@@ -4,14 +4,14 @@ import AuthContext from "../store/AuthContext";
 import "./Auth.css";
 import { useNavigate } from "react-router-dom";
 import icon from "../assets/strength.png";
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 
 const Auth = () => {
 
-  const notify = () => toast('Thank you, for registering!');
+  // const notify = () => toast('Thank you, for registering!');
 
   const { dispatch } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -31,10 +31,10 @@ const Auth = () => {
         dispatch({ type: "LOGIN", payload: res.data });
         setTimeout(() => {
           navigate("/dashboard");
-        }, 2000);
+        }, 5000);
       })
       .catch((err) => console.log(err));
-      notify()
+      // notify()
   };
 
   return (
@@ -67,13 +67,13 @@ const Auth = () => {
  
           </button>
           <div className="divider">X</div>
-          {/* <button className="auth-btn" type="submit">
+          <button className="auth-btn" type="submit">
             Submit
-          </button> */}
+          </button>
         </div>
       </form>
-
-      <ToastContainer className="toast-container" />
+{/* 
+      <ToastContainer className="toast-container" /> */}
     </div>
   );
 };

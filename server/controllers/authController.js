@@ -1,3 +1,6 @@
+/*eslint no-undef: "error"*/
+/*eslint-env node*/
+
 const {User} = require('../models/user')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
@@ -19,7 +22,7 @@ module.exports = {
     try {
       const {username, password} = req.body
 
-      let foundUser = await User.findOne({where: {username}})
+      let foundUser = await User.findOne({where: {username: username}})
 
       if(foundUser){
         res.status(400).send('There is already a user with that username')
