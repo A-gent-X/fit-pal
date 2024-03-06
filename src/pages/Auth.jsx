@@ -1,17 +1,17 @@
 import { useState, useContext, Image } from "react";
 import axios from "axios";
 import AuthContext from "../store/AuthContext";
-import "./Auth.css";
+import "./Auth.scss";
 import { useNavigate } from "react-router-dom";
 import icon from "../assets/strength.png";
-// import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 
 const Auth = () => {
 
-  // const notify = () => toast('Thank you, for registering!');
+  const notify = () => toast('Thank you, for registering!');
 
   const { dispatch } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ const Auth = () => {
         }, 5000);
       })
       .catch((err) => console.log(err));
-      // notify()
+      notify()
   };
 
   return (
@@ -72,8 +72,8 @@ const Auth = () => {
           </button>
         </div>
       </form>
-{/* 
-      <ToastContainer className="toast-container" /> */}
+
+      <ToastContainer className="toast-container" />
     </div>
   );
 };

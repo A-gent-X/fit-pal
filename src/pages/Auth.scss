@@ -1,10 +1,10 @@
-/* .toast-container{
+.toast-container{
   background: darkblue;
   color: #fff;
   font-size: 20px;
   width: 34vw;
   padding: 30px 20px;
-} */
+}
 
 .auth-container{
   display: flex;
@@ -12,6 +12,8 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  width: 100%;
+  background-color: white;
 }
 
 .auth-form{
@@ -22,6 +24,7 @@
   height: 80vh;
   width: 600px;
   border: solid black;
+  background: linear-gradient(120deg, #003DB8 60%, #0044CC 60%);
 }
 
 .auth-btn{

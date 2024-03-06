@@ -1,19 +1,30 @@
+
 #dashboard{
   display: flex;
   justify-content: center;
   height: 100vh;
+  width: 100%;
   align-items: center;
   background: linear-gradient(120deg, #003DB8 60%, #0044CC 60%);
 }
 
 .dashboard-container{
   border: solid black;
-  height: 500px;
+  height: 600px;
   width: 400px;
   flex-direction: column;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   border-radius: 1%;
+}
+
+.reset-btn{
+  width: 80px;
+  height: 40px;
+  border-radius: 10%;
+  color: white;
+  background-color: #d90429;
 }
 
 .sw-container{
@@ -159,7 +170,7 @@
 .card-btn{
   height: 40px;
   width: 100px;
-  background-color: #d90429;
+  background-color: green;
   color: white;
   border-radius: 10%;
 }

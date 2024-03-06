@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import axios from "axios";
 import AuthContext from "../store/AuthContext";
 import { useLoaderData } from "react-router-dom";
-// import './Dashboard.css'
+import './Dashboard.scss'
 import Footer from "./Footer";
 
 
@@ -23,6 +23,10 @@ const Dashboard = () => {
   const [startingWeight, setStartingWeight] = useState("");
   const [calorieGoal, setCalorieGoal] = useState("");
 
+  const [resetWeight, setResetWeight] = useState("");
+  const [resetStartingWeight, setResetStartingWeight] = useState("");
+  const [resetCalorieGoal, setResetCalorieGoal] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -37,11 +41,11 @@ const Dashboard = () => {
       .catch((err) => console.log(err));
   };
 
-  const handleDeleteGoal = () => {
+  const handleDeleteGoal = (e) => {
     e.preventDefault();
 
     axios
-    .delete('/api/goal/', {
+    .destroy('/api/goal/', {
       weightGoal,
       startingWeight,
       calorieGoal,
@@ -86,7 +90,7 @@ const Dashboard = () => {
                 <h3 className="dc-goal">{userGoal.calorieGoal}</h3>
               </div>
             </div>
-            <button onClick={() => handleDeleteGoal()}>reset</button>
+            <button className="reset-btn" onClick={(e) => handleDeleteGoal(e.target.value)}>reset</button>
             </div>
            </div>
       ) : (
@@ -105,7 +109,6 @@ const Dashboard = () => {
           />
 
           <button className="card-btn" type="submit">Add Goal</button>
-          
         </form>
         
       )}

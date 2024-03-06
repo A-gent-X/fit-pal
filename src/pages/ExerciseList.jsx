@@ -3,8 +3,7 @@ import axios from 'axios'
 import AuthContext from '../store/AuthContext'
 import { useLoaderData } from 'react-router-dom'
 import ExerciseCard from '../elements/ExerciseCard'
-import './ExerciseList.css'
-// import { BiSearchAlt2 } from "react-icons/bi";
+import './ExerciseList.scss'
 import Footer from './Footer'
 
 

@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import axios from "axios";
 import AuthContext from "../store/AuthContext";
-import "./AddExercise.css";
+import "./AddExercise.scss";
 import Footer from "./Footer";
 
 const AddExercise = () => {
@@ -37,23 +37,27 @@ const AddExercise = () => {
           placeholder="description"
           onChange={(e) => setDescription(e.target.value)}
         />
+
         <div className="fit-weight-vol">
           <input
             className="fit-weight"
             placeholder="weight"
             onChange={(e) => setWeight(e.target.value)}
           />
+
           <input
             className="fit-volume"
             placeholder="volume"
             onChange={(e) => setVolume(e.target.value)}
           />
         </div>
+
         <input
           className="input-date"
           type="date"
           onChange={(e) => setDate(e.target.value)}
         />
+
         <input
           className="workout-img-input"
           placeholder="image url"
