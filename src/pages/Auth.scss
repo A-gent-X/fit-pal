@@ -13,7 +13,7 @@
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  background-color: white;
+  background: linear-gradient(120deg,  #0044CC 28%, #003DB8 20%);
 }
 
 .auth-form{
@@ -23,14 +23,15 @@
   flex-direction: column;  
   height: 80vh;
   width: 600px;
+  border-radius: 5px;
   border: solid black;
-  background: linear-gradient(120deg, #003DB8 60%, #0044CC 60%);
+  background: linear-gradient(120deg, #003DB8 50%, #0044CC 20%);
 }
 
 .auth-btn{
   width: 240px;
   height: 40px;
-  border-radius: 30px;
+  border-radius: 10px;
   background-color: white;
   color: #0005ff;
 }
@@ -38,7 +39,7 @@
 .reg-btn{
   width: 240px;
   height: 40px;
-  border-radius: 30px;
+  border-radius: 10px;
   margin-bottom: 10px;
   background-color: #0005ff;
   color: white;
@@ -51,6 +52,7 @@
   height: 50px;
   width: 350px;
   margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .user-password{
@@ -60,12 +62,12 @@
   height: 50px;
   width: 350px;
   margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 .div-input{
   display: flex;
   flex-direction: column;
-
 }
 
 .div-button{

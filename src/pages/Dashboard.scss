@@ -5,6 +5,7 @@
   height: 100vh;
   width: 100%;
   align-items: center;
+  border-radius: 10%;
   background: linear-gradient(120deg, #003DB8 60%, #0044CC 60%);
 }
 
@@ -22,7 +23,7 @@
 .reset-btn{
   width: 80px;
   height: 40px;
-  border-radius: 10%;
+  border-radius: 5px;
   color: white;
   background-color: #d90429;
 }
@@ -159,6 +160,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  border-radius: 10px;
 }
 
 .dash-board-input{
